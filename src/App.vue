@@ -1,12 +1,25 @@
 <template>
   <div id="app">
+    <UneViewCommune />
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/mon-module">Mon Module</router-link>|
+      <router-link to="/mon-autre-module">Mon autre module</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import UneViewCommune from "@/core/views/UneViewCommune.vue";
+
+@Options({
+  components: {
+    UneViewCommune,
+  },
+})
+export default class App extends Vue {}
+</script>
 
 <style>
 #app {
