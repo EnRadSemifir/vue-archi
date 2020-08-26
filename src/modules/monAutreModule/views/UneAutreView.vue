@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <UnTitre msg="Ceci est un titre depuis une autre view" />
+    <UnAutreComposant :data="ducks" />
   </div>
 </template>
 
@@ -15,5 +16,7 @@ import UnAutreComposant from "@/modules/monAutreModule/components/UnAutreComposa
     UnAutreComposant,
   },
 })
-export default class UneAutreView extends Vue {}
+export default class UneAutreView extends Vue {
+  ducks = ["riri", "fifi", "loulou"];
+}
 </script>

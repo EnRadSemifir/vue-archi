@@ -9,7 +9,10 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    data: Array,
+    data: {
+      type: Array,
+      required: true,
+    },
   },
 })
 export default class UnComposant extends Vue {

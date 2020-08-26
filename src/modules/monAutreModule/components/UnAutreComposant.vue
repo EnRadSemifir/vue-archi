@@ -1,6 +1,8 @@
 <template>
   <div class="unAutreComposant">
-    <ul></ul>
+    <ul>
+      <li :v-for="item in data" :key="item">{{ item }}</li>
+    </ul>
   </div>
 </template>
 
@@ -9,7 +11,10 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   props: {
-    data: Array,
+    data: {
+      type: Array,
+      required: true,
+    },
   },
 })
 export default class UnAutreComposant extends Vue {
